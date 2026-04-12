@@ -3,13 +3,14 @@
 # <p align="center">timFS Plugin for Enigma2 (E²) ![GitHub repo size](https://img.shields.io/github/repo-size/oe-alliance-plugins/timFS.svg)</p>
 
 **timFS**
+
 Set up a custom menu
 
-– Assign custom names to plugins
-– Create groups and organize plugins into them
-– Sort by ABC/Views/Custom order
-– Configure display settings
-– Adjustable font size
+- Assign custom names to plugins
+- Create groups and organize plugins into them
+- Sort by ABC/Views/Custom order
+- Configure display settings
+- Adjustable font size
 
 
 ## Github status
@@ -44,7 +45,7 @@ Set up a custom menu
 
 **👨‍💻 Author:**
 
-- original Idea and Created by <a href="https://github.com/fs-plugins">**shadowrider **</a>
+- original Idea and Created by <a href="https://github.com/fs-plugins">**shadowrider**</a>
 
 **Special Thanks**
 - All contributors and testers
