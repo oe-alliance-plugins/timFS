@@ -1,0 +1,9 @@
+<screen name = "timFS" position="center,center" size="900,600" backgroundColor="#242424" title="timFS">
+		    <widget name="titel" position="0,0" size="900,35" valign="center" halign="center" backgroundColor="#2F4F4F" foregroundColor="white" font="Regular;24" />
+                    <widget name="tim_list" position="350,45" size="540,545" backgroundColor="#000000" scrollbarMode="showOnDemand" />
+                    <ePixmap  position="860,5" size="35,35" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/timFS/skin/bouquet.png" alphatest="blend" />
+                    <ePixmap  position="825,5" size="35,35" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/timFS/skin/menu.png" alphatest="blend" />
+                    <widget name="group_list" position="10,45" size="330,545" backgroundColor="#2E2E2E" scrollbarMode="showOnDemand" />
+
+</screen>
+

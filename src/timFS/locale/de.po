@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: timFS\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: shadowrider <plugins@fselbig.de>\n"
+"Language-Team: shadowrider <plugins@fselbig.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Generator: Poedit 3.8\n"
+
+msgid "Add group"
+msgstr "Gruppe hinzufügen"
+
+msgid "Automatically close:"
+msgstr "Automatisch schließen:"
+
+msgid "Change Description"
+msgstr "Bezeichnung ändern"
+
+msgid "Change group"
+msgstr "Gruppe auswählen"
+
+msgid "Change/Hide Plugin"
+msgstr "Plugin aktivieren/deaktivieren"
+
+msgid "Delete group"
+msgstr "Gruppe löschen"
+
+msgid "Description"
+msgstr "Bezeichnung"
+
+msgid "Display-Len:"
+msgstr "Display-Länge"
+
+msgid "Distance from the left:"
+msgstr "Abstand von links:"
+
+msgid "Distance from the top"
+msgstr "Abstand von oben:"
+
+msgid "Enter Plugin description:"
+msgstr "Plugin-Bezeichnung eingeben:"
+
+msgid "Enter group name:"
+msgstr "Gruppen-Name eingeben:"
+
+msgid "Font-Size"
+msgstr "Schrift-Grösse:"
+
+msgid "Group"
+msgstr "Gruppe"
+
+msgid "Groups"
+msgstr "Gruppen"
+
+msgid "Line"
+msgstr "Zeile"
+
+msgid "List sort by, with or without a number:"
+msgstr "Listen sortieren nach, mit oder ohne Nummern:"
+
+msgid "Name:"
+msgstr "Name:"
+
+msgid "Next group"
+msgstr "nächste Gruppe"
+
+msgid "Number of lines:"
+msgstr "Anzahl Zeilen:"
+
+msgid "Previous group"
+msgstr "vorige Gruppe"
+
+msgid "Save and close"
+msgstr "speichern und schließen"
+
+msgid "Scroll-Speed:"
+msgstr "Lauf-Geschwindigkeit"
+
+msgid "Show in main menu (reboot required!):"
+msgstr "in Hauptmenü anzeigen (Neustart erforderlich):"
+
+msgid "Sort"
+msgstr "verschieben"
+
+msgid "Text Size:"
+msgstr "Text-Größe:"
+
+msgid "The individual menu:"
+msgstr "Das individuelle Menü:"
+
+msgid "abc"
+msgstr "abc"
+
+msgid "abc,numbers"
+msgstr "abc+Nummern"
+
+msgid "height"
+msgstr "Höhe"
+
+msgid "hits"
+msgstr "Aufrufe"
+
+msgid "hits,numbers"
+msgstr "Aufrufe+Nummern"
+
+msgid "main group"
+msgstr "Haupt-Gruppe"
+
+msgid "own"
+msgstr "individuell"
+
+msgid "own,numbers"
+msgstr "individuell+Nummern"
+
+msgid "tools"
+msgstr "Tools"

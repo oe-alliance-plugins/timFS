@@ -1,0 +1,26 @@
+		<screen name="timFS_config" position="center,center" size="800,485" backgroundColor="#242424" title="timFS Setup">
+		    <widget name="titel" position="0,0" size="800,35" valign="center" halign="center" backgroundColor="#2F4F4F" foregroundColor="white" font="Regular;24" />
+
+			<widget name="config" position="10,40" size="780,105" backgroundColor="#000000" scrollbarMode="showOnDemand" />
+			
+			<widget name="config2" position="175,150" size="610,265" backgroundColor="#000000" scrollbarMode="showOnDemand" />
+			<widget name="config3" position="5,150" size="165,265" backgroundColor="#2E2E2E" scrollbarMode="showOnDemand" />
+			<widget name="descrip2" position="5,420" valign="center" halign="center"  backgroundColor="#2E2E2E" foregroundColor="#e5b243" size="790,30" font="Regular;20" />
+			
+	    <widget name="balken" position="5,455" backgroundColor="#000000" size="790,40" />
+
+            <widget name="pic_red" pixmap="skin_default/buttons/button_red.png" position="10,460" size="30,30" transparent="0" alphatest="blend" />
+            <widget name="label_red" position="30,457" backgroundColor="#000000" size="120,25" zPosition="1" font="Regular;20" />
+            <widget name="pic_green" pixmap="skin_default/buttons/button_green.png" position="145,460" size="30,30" zPosition="2" alphatest="blend" />
+	    <widget name="label_green" position="170,457" size="120,25" backgroundColor="#000000" zPosition="2" font="Regular;20" transparent="0"/>
+            
+            <widget name="pic_yellow" pixmap="skin_default/buttons/button_yellow.png" position="300,460" zPosition="5" size="30,30" alphatest="blend" />
+            
+            <widget name="label_yellow" position="330,457" size="120,25" zPosition="2" font="Regular;20" backgroundColor="#000000" transparent="0"/>
+            <widget name="pic_blue" pixmap="skin_default/buttons/button_blue.png" position="480,460" zPosition="5" size="30,30" alphatest="blend" />
+            <widget name="label_blue" position="500,457" size="120,25" zPosition="5" font="Regular;20" backgroundColor="#000000" transparent="0"/>
+                         
+	    <widget name="ok" position="650,457" size="35,35" pixmap="~/skin/key_ok.png" zPosition="2" alphatest="blend" />
+            <ePixmap  position="700,457" size="35,35" pixmap="~/skin/bouquet.png" alphatest="blend" />
+	    <ePixmap  position="750,457" size="35,35" pixmap="~/skin/key_help.png" alphatest="blend" />
+        </screen>

@@ -1,0 +1,9 @@
+		<screen name="timFS_setDisplay" position="center,center" size="560,450" title="timFS - Display-Settings">
+		    <widget name="titel" position="0,0" size="560,35" valign="center" halign="center" backgroundColor="#2F4F4F" foregroundColor="white" font="Regular;24" />
+			<widget name="config" position="20,45" size="520,350" scrollbarMode="showOnDemand" />
+            <widget name="pic_red" pixmap="skin_default/buttons/button_red.png" position="20,420" size="30,30" transparent="0" alphatest="blend" />
+            <widget name="label_red" position="55,417" backgroundColor="#000000" size="120,25" zPosition="1" font="Regular;20" />
+            <widget name="pic_green" pixmap="skin_default/buttons/button_green.png" position="165,420" size="30,30" zPosition="2" alphatest="blend" />
+	    <widget name="label_green" position="200,417" size="120,25" backgroundColor="#000000" zPosition="2" font="Regular;20" transparent="0"/>
+
+		</screen>

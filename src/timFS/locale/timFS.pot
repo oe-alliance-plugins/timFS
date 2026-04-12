@@ -1,0 +1,265 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2026-04-12 11:32+0200\n"
+"PO-Revision-Date: 2026-04-12 11:31+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: plugin.py:45
+msgid "abc"
+msgstr ""
+
+#: plugin.py:45
+msgid "hits"
+msgstr ""
+
+#: plugin.py:45
+msgid "own"
+msgstr ""
+
+#: plugin.py:45
+msgid "abc,numbers"
+msgstr ""
+
+#: plugin.py:45
+msgid "hits,numbers"
+msgstr ""
+
+#: plugin.py:45
+msgid "own,numbers"
+msgstr ""
+
+#: plugin.py:74
+msgid "timFS Setup v"
+msgstr ""
+
+#: plugin.py:77 plugin.py:515 plugin.py:605
+msgid "The individual menu:"
+msgstr ""
+
+#: plugin.py:77 plugin.py:80 plugin.py:183 plugin.py:529
+msgid "Settings"
+msgstr ""
+
+#: plugin.py:82 plugin.py:179
+msgid "Display"
+msgstr ""
+
+#: plugin.py:100
+msgid "List sort by, with or without a number:"
+msgstr ""
+
+#: plugin.py:101
+msgid "Show in main menu (reboot required!):"
+msgstr ""
+
+#: plugin.py:102
+msgid "Text Size:"
+msgstr ""
+
+#: plugin.py:103
+msgid "Automatically close:"
+msgstr ""
+
+#: plugin.py:109
+msgid "Save and close"
+msgstr ""
+
+#: plugin.py:110
+msgid "Change/Hide Plugin"
+msgstr ""
+
+#: plugin.py:111
+msgid "Delete group"
+msgstr ""
+
+#: plugin.py:112
+msgid "Change Description"
+msgstr ""
+
+#: plugin.py:113
+msgid "Change group"
+msgstr ""
+
+#: plugin.py:114
+msgid "Add group"
+msgstr ""
+
+#: plugin.py:115 plugin.py:117 plugin.py:527
+msgid "Next group"
+msgstr ""
+
+#: plugin.py:116 plugin.py:118 plugin.py:528
+msgid "Previous group"
+msgstr ""
+
+#: plugin.py:119
+msgid "Up"
+msgstr ""
+
+#: plugin.py:120
+msgid "Down"
+msgstr ""
+
+#: plugin.py:121
+msgid "Right"
+msgstr ""
+
+#: plugin.py:122
+msgid "Left"
+msgstr ""
+
+#: plugin.py:189
+msgid "Sort"
+msgstr ""
+
+#: plugin.py:190
+msgid "Group"
+msgstr ""
+
+#: plugin.py:192
+msgid "Rename"
+msgstr ""
+
+#: plugin.py:201
+msgid "Add"
+msgstr ""
+
+#: plugin.py:203
+msgid "Delete"
+msgstr ""
+
+#: plugin.py:206
+msgid "Groups"
+msgstr ""
+
+#: plugin.py:214 plugin.py:216
+msgid "Description"
+msgstr ""
+
+#: plugin.py:340 plugin.py:346 plugin.py:503 plugin.py:726 plugin.py:751
+#: plugin.py:753 plugin.py:756 plugin.py:758 plugin.py:796
+msgid "main group"
+msgstr ""
+
+#: plugin.py:354
+msgid "Enter group name:"
+msgstr ""
+
+#: plugin.py:367
+msgid "Enter Plugin description:"
+msgstr ""
+
+#: plugin.py:422 plugin.py:426
+msgid "name"
+msgstr ""
+
+#: plugin.py:422 plugin.py:426
+msgid "group"
+msgstr ""
+
+#: plugin.py:435
+msgid "Display Settings"
+msgstr ""
+
+#: plugin.py:438
+msgid "Save"
+msgstr ""
+
+#: plugin.py:439
+msgid "Exit"
+msgstr ""
+
+#: plugin.py:453
+msgid "Number of lines:"
+msgstr ""
+
+#: plugin.py:454
+msgid "Scroll-Speed:"
+msgstr ""
+
+#: plugin.py:455
+msgid "Display-Len:"
+msgstr ""
+
+#: plugin.py:456
+msgid "Distance from the left:"
+msgstr ""
+
+#: plugin.py:459 plugin.py:460 plugin.py:461 plugin.py:462 plugin.py:467
+#: plugin.py:468 plugin.py:469 plugin.py:470
+msgid "Line"
+msgstr ""
+
+#: plugin.py:459 plugin.py:467
+msgid "Text"
+msgstr ""
+
+#: plugin.py:460 plugin.py:468
+msgid "Distance from the top"
+msgstr ""
+
+#: plugin.py:461 plugin.py:469
+msgid "height"
+msgstr ""
+
+#: plugin.py:462 plugin.py:470
+msgid "Font-Size"
+msgstr ""
+
+#: plugin.py:526
+msgid "about"
+msgstr ""
+
+#: plugin.py:655 plugin.py:708 plugin.py:751 plugin.py:756
+msgid "Movie archive"
+msgstr ""
+
+#: plugin.py:704
+msgid "DeviceManager"
+msgstr ""
+
+#: plugin.py:704
+msgid "AtileHD Setup"
+msgstr ""
+
+#: plugin.py:704
+msgid "AutoShutDown Setup"
+msgstr ""
+
+#: plugin.py:704
+msgid "Skinselector"
+msgstr ""
+
+#: plugin.py:704
+msgid "Video Fine-Tuning"
+msgstr ""
+
+#: plugin.py:705
+msgid "Videomode-K"
+msgstr ""
+
+#: plugin.py:705
+msgid "Remote channel stream converter"
+msgstr ""
+
+#: plugin.py:705
+msgid "SecondInfoBar"
+msgstr ""
+
+#: plugin.py:705
+msgid "Wireless LAN Setup"
+msgstr ""
+
+#: plugin.py:895
+msgid "The individual menu"
+msgstr ""

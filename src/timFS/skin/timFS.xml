@@ -1,0 +1,77 @@
+<screen name = "timFS" position="center,center" size="900,600" backgroundColor="#242424" title="timFS">
+		    <widget name="titel" position="0,0" size="900,35" valign="center" halign="center" backgroundColor="#2F4F4F" foregroundColor="white" font="Regular;24" />
+
+                        <widget source="tim_list" render="Listbox" position="350,45" size="540,545" backgroundColor="#000000" scrollbarMode="showOnDemand">
+                                <convert type="TemplatedMultiContent">
+								{"templates":
+									{"default": (34, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(540, 34), font=0, text="",backcolor =0x000000, backcolor_sel = 0x545454),
+                                                        MultiContentEntryText(pos = (5, 3), size = (20, 24), font=0, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, text = 9),  #Tasten_Nr
+                                                        MultiContentEntryText(pos = (45, 3), size = (500, 24), font=0, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # Name
+                                        
+										], True),
+									"24": (44, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(540, 44), font=1, text="",backcolor =0x000000, backcolor_sel = 0x545454),
+                                                        MultiContentEntryText(pos = (5, 3), size = (20, 34), font=1, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, text = 9),  #Tasten_Nr
+                                                        MultiContentEntryText(pos = (45, 3), size = (500, 34), font=1, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # Name
+
+										], True),
+									"26": (50, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(540, 50), font=2, text="",backcolor =0x000000, backcolor_sel = 0x545454),
+                                                        MultiContentEntryText(pos = (5, 3), size = (20, 40), font=2, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, text = 9),  #Tasten_Nr
+                                                        MultiContentEntryText(pos = (45, 3), size = (500, 40), font=2, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # Name
+
+										], True),
+
+									"28": (55, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(540, 55), font=3, text="",backcolor =0x000000, backcolor_sel = 0x545454),
+                                                        MultiContentEntryText(pos = (5, 3), size = (20, 50), font=3, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER, text = 9),  #Tasten_Nr
+                                                        MultiContentEntryText(pos = (45, 3), size = (500, 50), font=3, color=0xBEBEBE, color_sel=0xFFFFFF,backcolor=0x000000, backcolor_sel=0x545454, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # Name
+
+										], True),
+
+
+										},
+
+										"fonts": [gFont("Regular", 20),gFont("Regular", 22),gFont("Regular", 24),gFont("Regular", 26)],
+										"itemHeight": 55
+
+									}
+                                </convert>
+                        </widget>
+
+                    <ePixmap  position="860,5" size="35,35" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/timFS/skin/bouquet.png" alphatest="blend" />
+                    <ePixmap  position="825,5" size="35,35" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/timFS/skin/menu.png" alphatest="blend" />
+                    
+                        <widget source="group_list" render="Listbox" position="10,45" size="330,545" backgroundColor="#2E2E2E" scrollbarMode="showOnDemand" enableWrapAround="1">
+                                <convert type="TemplatedMultiContent">
+								{"templates":
+									{"default": (40, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(330, 40), font=0, text="",backcolor =0x2E2E2E, backcolor_sel = 0x2E2E2E, border_width = 0),
+                                                        MultiContentEntryText(pos = (5, 5), size = (320, 30), font=0, color=0xBEBEBE, color_sel=0xFFB90F,backcolor=0x2E2E2E, backcolor_sel = 0x2E2E2E, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, border_width = 0, border_color = 0x545454, text = 0), # Name
+
+										], True, "showNever"),
+									"24": (50, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(330, 50), font=1, text="",backcolor =0x2E2E2E, backcolor_sel = 0x2E2E2E, border_width = 0),
+                                                        MultiContentEntryText(pos = (5, 5), size = (320, 40), font=1, color=0xBEBEBE, color_sel=0xFFB90F,backcolor=0x2E2E2E, backcolor_sel = 0x2E2E2E, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, border_width = 0, border_color = 0x545454, text = 0), # Name
+
+										], True, "showNever"),
+									"26": (55, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(330, 55), font=2, text="",backcolor =0x2E2E2E, backcolor_sel = 0x2E2E2E, border_width = 0),
+                                                        MultiContentEntryText(pos = (5, 5), size = (320, 45), font=2, color=0xBEBEBE, color_sel=0xFFB90F,backcolor=0x2E2E2E, backcolor_sel = 0x2E2E2E, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, border_width = 0, border_color = 0x545454, text = 0), # Name
+
+										], True, "showNever"),
+									"28": (60, [
+                                                        MultiContentEntryText(pos=(0, 0), size=(330, 60), font=3, text="",backcolor =0x2E2E2E, backcolor_sel = 0x2E2E2E, border_width = 0),
+                                                        MultiContentEntryText(pos = (5, 5), size = (320, 50), font=3, color=0xBEBEBE, color_sel=0xFFB90F,backcolor=0x2E2E2E, backcolor_sel = 0x2E2E2E, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, border_width = 0, border_color = 0x545454, text = 0), # Name
+
+										], True, "showNever")
+										},
+									
+                                        "fonts": [gFont("Regular", 22),gFont("Regular", 24),gFont("Regular", 26),gFont("Regular", 28)],
+                                        "itemHeight": 36
+                                        }
+                                </convert>
+                        </widget>
+</screen>
+
