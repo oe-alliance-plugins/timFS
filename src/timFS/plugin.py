@@ -6,30 +6,23 @@ from Components.ActionMap import ActionMap, HelpableActionMap, NumberActionMap
 from Components.Label import Label
 from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryText, MultiContentEntryPixmapAlphaTest
-from Components.config import config
 from Components.Pixmap import Pixmap
-from Screens.InfoBar import MoviePlayer
 from Components.PluginComponent import plugins
-from Components.Button import Button
 from Screens.Screen import Screen
 from Plugins.Plugin import PluginDescriptor
 
-from Components.ConfigList import *
 from Components.Sources.List import List
-from Components.config import *
-from Components.ConfigList import ConfigList, ConfigListScreen
-from Components.config import config, ConfigSubsection, ConfigText, getConfigListEntry, ConfigSelection
+from Components.ConfigList import ConfigListScreen, KEY_LEFT, KEY_RIGHT
+from Components.config import config, ConfigSubsection, ConfigText, getConfigListEntry, ConfigSelection, ConfigYesNo, NoSave, ConfigInteger
 
 from Screens.HelpMenu import HelpableScreen
 from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.InfoBar import InfoBar
 from Screens.InfoBarGenerics import InfoBarChannelSelection
 from enigma import eListboxPythonMultiContent, gFont, RT_HALIGN_LEFT, loadPNG, eTimer
 from Tools.Directories import fileExists
 import os
-import re
 
 conf_path = "/etc/enigma2/timFSconf"
 found_new = False
@@ -177,39 +170,39 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 			self.screen1a()
 
 	def screen1a(self):
-			self["ok"].show()
-			self["label_green"].setText(_("Display"))
-			self["label_yellow"].setText("")
-			self["label_blue"].setText("")
-			self["label_red"].setText("")
-			self["descrip2"].setText(_("Settings"))
-			self["config3"].instance.setSelectionEnable(0)
-			self["config2"].instance.setSelectionEnable(0)
-			self["config"].instance.setSelectionEnable(1)
+		self["ok"].show()
+		self["label_green"].setText(_("Display"))
+		self["label_yellow"].setText("")
+		self["label_blue"].setText("")
+		self["label_red"].setText("")
+		self["descrip2"].setText(_("Settings"))
+		self["config3"].instance.setSelectionEnable(0)
+		self["config2"].instance.setSelectionEnable(0)
+		self["config"].instance.setSelectionEnable(1)
 
 	def screen2a(self):  #pluginlist
-			self["label_green"].setText(_("Sort"))
-			self["label_yellow"].setText(_("Group"))
-			self["label_red"].setText("")
-			self["label_blue"].setText(_("Rename"))
-			self["ok"].show()
+		self["label_green"].setText(_("Sort"))
+		self["label_yellow"].setText(_("Group"))
+		self["label_red"].setText("")
+		self["label_blue"].setText(_("Rename"))
+		self["ok"].show()
 
-			self["config"].instance.setSelectionEnable(0)
-			self["config3"].instance.setSelectionEnable(0)
-			self["config2"].instance.setSelectionEnable(1)
-			self.textset()
+		self["config"].instance.setSelectionEnable(0)
+		self["config3"].instance.setSelectionEnable(0)
+		self["config2"].instance.setSelectionEnable(1)
+		self.textset()
 
 	def screen3a(self):  #groups
-			self["label_green"].setText(_("Add"))
-			self["label_yellow"].setText("")
-			self["label_red"].setText(_("Delete"))
-			self["label_blue"].setText("")
-			self["ok"].hide()
-			self["descrip2"].setText(_("Groups"))
-			self["label_blue"].setText("")
-			self["config2"].instance.setSelectionEnable(0)
-			self["config"].instance.setSelectionEnable(0)
-			self["config3"].instance.setSelectionEnable(1)
+		self["label_green"].setText(_("Add"))
+		self["label_yellow"].setText("")
+		self["label_red"].setText(_("Delete"))
+		self["label_blue"].setText("")
+		self["ok"].hide()
+		self["descrip2"].setText(_("Groups"))
+		self["label_blue"].setText("")
+		self["config2"].instance.setSelectionEnable(0)
+		self["config"].instance.setSelectionEnable(0)
+		self["config3"].instance.setSelectionEnable(1)
 
 	def textset(self):  #groups
 		if len(self["config2"].getCurrent()[0][6]):
@@ -294,7 +287,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 		if self.select_screen == 2:
 			item = self["config2"].getCurrent()[0]
 			if item:
-				list_name = item[1]
+				list_name = item[1]  # noqa F841
 				group_name = item[5]
 				next_name = self.next_item(group_name, self.group_list_select)
 				ind = self.config_list_select.index(list(item))
@@ -330,7 +323,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 						self.config_list_select[ind][3] = "1"
 					write_config(self.config_list_select, [], self.group_list_select)
 					self.readconfig()
-				except:
+				except Exception:
 					pass
 
 	def del_group(self):
@@ -338,7 +331,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 			item = self["config3"].getCurrent()
 			if item:
 				list_name = item[0]
-				if not list_name == _("main group") and list_name in self.group_list_select:
+				if list_name != _("main group") and list_name in self.group_list_select:
 					self.group_list_select.remove(list_name)
 					write_config(self.config_list_select, [], self.group_list_select)
 					for x in self.config_list_select:
@@ -368,7 +361,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 			self.session.openWithCallback(self.write_descrip, VirtualKeyBoard, title=_("Enter Plugin description:"), text=item)
 
 	def write_descrip(self, descrip1=None):
-		if not descrip1 == None:
+		if descrip1 is not None:
 			item = self["config2"].getCurrent()[0]
 			if item:
 				try:
@@ -376,7 +369,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 					self.config_list_select[ind][6] = descrip1
 					write_config(self.config_list_select, [], self.group_list_select)
 					self.readconfig()
-				except:
+				except Exception:
 					pass
 
 	def select(self):
@@ -553,7 +546,7 @@ class timFS(Screen, HelpableScreen):
 				if int(number) < 10 and len(self.dump_list) >= (number + 1):
 					self["tim_list"].setIndex(number)
 					self.ok()
-			except:
+			except Exception:
 				pass
 
 	def createSummary(self):
@@ -648,7 +641,7 @@ class timFS(Screen, HelpableScreen):
 					exec(t2)
 					if config.plugins.timFS.close1.value:
 						self.exit()
-				except:
+				except Exception:
 					pass
 			else:
 				if "Grafischer Multi-EPG" in str(cur[1]):
@@ -661,7 +654,7 @@ class timFS(Screen, HelpableScreen):
 					self.close(self.session, cur[3], param)
 				else:
 					if param:
-						run = cur[3](self.session, InfoBar.instance.servicelist)
+						run = cur[3](self.session, InfoBar.instance.servicelist)  # noqa F841
 					else:
 						cur[3](self.session)
 
@@ -684,7 +677,7 @@ def closen(session=None, result=None, param=None):
 				InfoBar.showExtensionSelection = start
 				InfoBar.instance.showExtensionSelection()
 				InfoBar.showExtensionSelection = InfoBar.Original_showExtensionSelection
-			except:
+			except Exception:
 				pass
 		elif str(result) == "exit":
 			pass
@@ -697,7 +690,7 @@ def closen(session=None, result=None, param=None):
 						result(session, param)
 				else:
 					result(session)
-			except:
+			except Exception:
 				pass
 
 
@@ -717,10 +710,10 @@ def start(self):
 				names.append(plugin.name.lower())
 		if mv_str.lower() not in names:
 			try:
-				from Screens.MovieSelection import MovieSelection
+				from Screens.MovieSelection import MovieSelection  # noqa F401
 				pluginlist.append(("MovieSelection", mv_str))
 				names.append(mv_str.lower())
-			except:
+			except Exception:
 				pass
 		if not fileExists(conf_path) or (fileExists(conf_path) and os.path.getsize(conf_path) == 0):
 			nl = []
@@ -760,7 +753,7 @@ def start(self):
 						else:
 							new_list.append(("", plugin_name, "0", "0", "99", _("main group"), "", 0, "", ""))
 
-			except:
+			except Exception:
 				pass
 			#f2.close()
 
@@ -783,12 +776,12 @@ def read_config():
 			for x in read:
 				read1.append(str(x).strip())
 			if read1:
-					if read1[0] == "0":
-						pluglist.append((read1[1].replace(";", ","), read1[2], read1[3], read1[4], read1[5], read1[6], 0, "", ""))
-					elif read1[0] == "1":
-						eigenlist.append((None, read1[1].replace(";", ","), read1[2], read1[3], read1[4], read1[5], read1[6], int(read1[0]), read1[7], read1[8]))
-					elif read1[0] == "2":
-						gruplist.append(read1[1])
+				if read1[0] == "0":
+					pluglist.append((read1[1].replace(";", ","), read1[2], read1[3], read1[4], read1[5], read1[6], 0, "", ""))
+				elif read1[0] == "1":
+					eigenlist.append((None, read1[1].replace(";", ","), read1[2], read1[3], read1[4], read1[5], read1[6], int(read1[0]), read1[7], read1[8]))
+				elif read1[0] == "2":
+					gruplist.append(read1[1])
 	return (pluglist, eigenlist, gruplist)
 
 
@@ -864,7 +857,7 @@ class timFSdisplay(Screen):
 		for x in self.label_list:
 			try:
 				self[x].text = group if x == "group" else name
-			except:
+			except Exception:
 				pass
 		self.dp_text = name
 		self.display_text = name
