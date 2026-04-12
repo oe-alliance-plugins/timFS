@@ -2,7 +2,14 @@
 
 # <p align="center">timFS Plugin for Enigma2 (E²) ![GitHub repo size](https://img.shields.io/github/repo-size/oe-alliance-plugins/timFS.svg)</p>
 
-**Menü zum selbst gestalten und umbenennen der Einträge / menu for self edit and rename **
+**timFS**
+Set up a custom menu
+
+– Assign custom names to plugins
+– Create groups and organize plugins into them
+– Sort by ABC/Views/Custom order
+– Configure display settings
+– Adjustable font size
 
 
 ## Github status
@@ -39,7 +46,7 @@
 
 - original Idea and Created by <a href="https://github.com/fs-plugins">**shadowrider **</a>
 
-** Special Thanks **
+**Special Thanks**
 - All contributors and testers
 - Open source community
 - Enigma2 developers
