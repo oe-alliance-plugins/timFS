@@ -12,8 +12,8 @@ from Screens.Screen import Screen
 from Plugins.Plugin import PluginDescriptor
 
 from Components.Sources.List import List
-from Components.ConfigList import ConfigListScreen, KEY_LEFT, KEY_RIGHT
-from Components.config import config, ConfigSubsection, ConfigText, getConfigListEntry, ConfigSelection, ConfigYesNo, NoSave, ConfigInteger
+from Components.ConfigList import ConfigListScreen
+from Components.config import ACTIONKEY_LEFT, ACTIONKEY_RIGHT, config, ConfigSubsection, ConfigText, getConfigListEntry, ConfigSelection, ConfigYesNo, NoSave, ConfigInteger
 
 from Screens.HelpMenu import HelpableScreen
 from Screens.VirtualKeyBoard import VirtualKeyBoard
@@ -127,7 +127,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 
 	def right(self):
 		if self.select_screen == 1:
-			self["config"].handleKey(KEY_RIGHT)
+			self["config"].handleKey(ACTIONKEY_RIGHT)
 			self.readconfig()
 		elif self.select_screen == 2:
 			self["config2"].pageDown()
@@ -137,7 +137,7 @@ class timFS_config(Screen, ConfigListScreen, HelpableScreen):
 
 	def left(self):
 		if self.select_screen == 1:
-			self["config"].handleKey(KEY_LEFT)
+			self["config"].handleKey(ACTIONKEY_LEFT)
 			self.readconfig()
 		elif self.select_screen == 2:
 			self["config2"].pageUp()
